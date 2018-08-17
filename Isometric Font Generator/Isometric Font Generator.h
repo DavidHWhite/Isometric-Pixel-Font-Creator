@@ -8,4 +8,6 @@ struct coords {
 	coords(double xin, double yin);
 };
 
-void convertCoords(coords *coordsIn, double zin);
+coords convertCoords(coords *coordsIn, double zin);
+
+std::string generateTop(int width, int height);
