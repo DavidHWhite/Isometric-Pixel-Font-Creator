@@ -1,13 +1,5 @@
 #pragma once
 
-struct coords {
-	double x;
-	double y;
+std::string convertCoords(double xin, double yin, double zin);
 
-	coords();
-	coords(double xin, double yin);
-};
-
-coords convertCoords(coords *coordsIn, double zin);
-
-std::string generateTop(int width, int height);
+std::string generateTop(int width, int height, std::vector<std::vector<bool>> glyph);
