@@ -166,6 +166,7 @@
     <Text Include="INIH\LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data.ini" />
     <None Include="INIH\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
