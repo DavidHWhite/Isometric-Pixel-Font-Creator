@@ -7,11 +7,23 @@ struct tagIdentifier {
 	string defaultVal;
 };
 
+struct coord {
+	int x;
+	int y;
+
+	coord(int xin, int yin) {
+		x = xin;
+		y = yin;
+	}
+};
+
 std::string convertCoords(double xin, double yin, double zin);
 
 std::string generateTop(int width, int height, std::vector<std::vector<bool>> &glyph);
 
 std::string generateSide(int width, int height, std::vector<std::vector<bool>> &glyph);
+
+std::string generateFront(int width, int height, std::vector<std::vector<bool>> &glyph);
 
 void writeHeaders(std::ofstream files[], INIReader &reader);
 
