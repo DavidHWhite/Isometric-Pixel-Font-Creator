@@ -27,7 +27,7 @@ struct CoordCompare {
 
 std::string generateTop(int width, int height, std::vector<std::vector<bool>> &glyph);
 
-std::string generateShadow(int width, int height, std::vector<std::vector<bool>> &glyph);
+std::string generateShadow(int width, int height, std::vector<std::vector<bool>> &glyph, INIReader & reader);
 
 std::string generateSide(int width, int height, std::vector<std::vector<bool>> &glyph);
 
@@ -37,7 +37,7 @@ double convertToRads(double degrees);
 
 std::string convertCoords(double xin, double yin, double zin);
 
-void writeHeaders(std::ofstream files[], INIReader &reader);
+void writeHeaders(std::ofstream files[], INIReader & reader);
 
 void writeTagList(std::vector<tagIdentifier> &tags, INIReader & reader, std::ofstream * files);
 
