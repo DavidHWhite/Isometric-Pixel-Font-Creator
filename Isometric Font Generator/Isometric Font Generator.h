@@ -17,7 +17,6 @@ struct coord {
 	}
 };
 
-template<typename T>
 struct CoordCompare {
 	bool operator() (const coord& a, const coord& b) const {
 		if(a.y < b.y)  return true;
@@ -29,6 +28,8 @@ struct CoordCompare {
 std::string convertCoords(double xin, double yin, double zin);
 
 std::string generateTop(int width, int height, std::vector<std::vector<bool>> &glyph);
+
+std::string generateShadow(int width, int height, std::vector<std::vector<bool>> &glyph);
 
 std::string generateSide(int width, int height, std::vector<std::vector<bool>> &glyph);
 
