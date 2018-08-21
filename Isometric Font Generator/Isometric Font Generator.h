@@ -17,6 +17,15 @@ struct coord {
 	}
 };
 
+template<typename T>
+struct CoordCompare {
+	bool operator() (const coord& a, const coord& b) const {
+		if(a.y < b.y)  return true;
+		if(a.y > b.y)  return false;
+		return (a.x < b.x);
+	}
+};
+
 std::string convertCoords(double xin, double yin, double zin);
 
 std::string generateTop(int width, int height, std::vector<std::vector<bool>> &glyph);
